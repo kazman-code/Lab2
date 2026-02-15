@@ -1,5 +1,9 @@
+//Array of strings
 let myTasks:string[] = [];
 
+// Arrow function to add a new task to the array
+// Takes a task (string) as a parameter
+// Returns the updated number of tasks (number)
 let addTask = (task:string):number=>{
     myTasks.push(task);
     console.log(task+" has been added to my Tasks List.")
