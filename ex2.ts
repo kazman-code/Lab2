@@ -1,29 +1,30 @@
 //Array of strings
 let myTasks:string[] = [];
 
-// Arrow function to add a new task to the array
-// Takes a task (string) as a parameter
-// Returns the updated number of tasks (number)
+
+// add a new task to the array
 let addTask = (task:string):number=>{
-    myTasks.push(task);
-    console.log(task+" has been added to my Tasks List.")
-    return myTasks.length;
+    myTasks.push(task);  //adds new task to myTasks array
+    console.log(task+" has been added to my Tasks List.")//displays task list
+    return myTasks.length;//returns all tasks in array
 }
 
+//lists all tasks in the array
 function listAllItems():void{
-    for(let i=0;i<myTasks.length;i++){
-        console.log("Task: "+myTasks[i]+" is on my Tasks list.")
+    for(let i=0;i<myTasks.length;i++){//loops thru array
+        console.log("Task: "+myTasks[i]+" is on my Tasks list.")//prints out tasks
     }
 }
 
+//deletes tasks from array
 function deleteTask(task:string):number{
-    let index:number = myTasks.indexOf(task);
+    let index:number = myTasks.indexOf(task);//finds position of task
   
 
     if(index === -1){
         console.log(task+" is not in my Task list.")
     }else{
-          myTasks.splice(index,1);
+          myTasks.splice(index,1);//splice is used to delete task
     }
     return myTasks.length; 
 }
